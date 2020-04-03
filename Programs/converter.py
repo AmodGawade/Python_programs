@@ -72,7 +72,7 @@ def energy(a):
 
 
 # main program
-while True:
+def convert():
     print("This program is used to convert units")
     op = input('''To convert celsius to fahrenheit type 'temp'
     To convert hours to seconds type 'time'
@@ -124,3 +124,5 @@ while True:
         print(e)
 
 
+if __name__ == '__main__':
+    convert()
