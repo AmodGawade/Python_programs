@@ -1,6 +1,7 @@
 #!/Users/amod/venv/bin/python
 # name : Amod
 # date : 1 april 2020
+import argparse
 
 
 # Function definition
@@ -32,9 +33,20 @@ def divide(a, b):
 
 
 # main Program
-a = input("Enter an integer value : ")
-b = input("Enter an integer value : ")
-op = input("Enter either * or / or + or -")
+#a = input("Enter an integer value : ")
+#b = input("Enter an integer value : ")
+#op = input("Enter either * or / or + or -")
+
+parser = argparse.ArgumentParser(description="Math Calculation")
+parser.add_argument('a', type=int, help="Enter only integers")
+parser.add_argument('b', type=int, help="Enter only integers")
+parser.add_argument('op', type=str, help="Enter only symbols * or / or + or --")
+args = parser.parse_args()
+# print(args)
+a = args.a
+b = args.b
+op = args.op
+
 
 if op == "*":
     multiply(a, b)
